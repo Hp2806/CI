@@ -1,0 +1,12 @@
+(defun math-operations ()
+  (format t "Enter first number: ")
+  (finish-output)
+  (let ((num1 (read)))
+    (format t "Enter second number: ")
+    (finish-output)
+    (let ((num2 (read)))
+      (format t "GCD: ~A~%" (gcd num1 num2))
+      (format t "LCM: ~A~%" (lcm num1 num2))
+      (format t "Power (~A^~A): ~A~%" num1 num2 (expt num1 num2)))))
+
+(math-operations)
