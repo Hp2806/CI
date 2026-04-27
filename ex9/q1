@@ -1,0 +1,16 @@
+import random
+
+target = int(input("Enter the die number to check (1-6): "))
+if target < 1 or target > 6:
+    print("Invalid input. Please enter a number between 1 and 6.")
+else:
+    rolls = int(input("Enter how many times to roll the die: "))
+    count = 0
+    for i in range(rolls):
+        roll = random.randint(1, 6)
+        if roll == target:
+            count += 1
+    probability = count / rolls
+    print(f"\nResults after rolling the die {rolls} times:")
+    print(f"The number {target} appeared {count} times.")
+    print(f"The probability P({target}) = {probability:.4f}")
