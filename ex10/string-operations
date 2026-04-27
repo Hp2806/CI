@@ -1,0 +1,9 @@
+(defun string-operations ()
+  (format t "Enter a word: ")
+  (finish-output)
+  (let ((user-word (read-line)))
+    (format t "1. Length of string: ~A~%" (length user-word))
+    (format t "2. Uppercase: ~A~%" (string-upcase user-word))
+    (format t "3. Reversed: ~A~%" (reverse user-word))))
+
+(string-operations)
